@@ -114,7 +114,8 @@ namespace WizardUI
             if (m_registeredScreens.TryGetValue(screenID, out ct1))
                 HideScreen(ct1);
 #if UNITY_EDITOR
-            Debug.LogWarning($"Could not hide Screen ID {screenID} not registered to this layer");
+            else
+                Debug.LogWarning($"Could not hide Screen ID {screenID} not registered to this layer");
 #endif
         }
 
