@@ -152,15 +152,15 @@ namespace WizardUI
 #endif
                     return;
                 }
-                
-                HierarchyFixOnShow();
-                OnPropertiesSet();
-
-                if (!gameObject.activeSelf)
-                    DoAnimation(m_animIn, OnTransitionInFinished , true);
-                else if (InTransitionFinished != null)
-                    InTransitionFinished(this);
             }
+                            
+            HierarchyFixOnShow();
+            OnPropertiesSet();
+
+            if (!gameObject.activeSelf)
+                DoAnimation(m_animIn, OnTransitionInFinished , true);
+            else if (InTransitionFinished != null)
+                InTransitionFinished(this);
         }
 
         /// <summary>
