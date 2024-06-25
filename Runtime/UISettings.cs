@@ -17,7 +17,7 @@ namespace WizardUI{
         [Tooltip(
             "Prefabs for all the screens (both Panels and Windows) that are to be instanced and registered when the UI in instantiated")]
         [SerializeField]
-        private List<GameObject> m_screenToRegister = null;
+        private List<GameObject> m_screenToRegister = new List<GameObject>();
 
         [Tooltip(
             "In Case a screen prefab is not deactivated, should the system automatically deactivate its GameObject upon instantiation?" +
