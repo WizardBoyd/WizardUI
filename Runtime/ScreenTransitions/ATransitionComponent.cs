@@ -7,7 +7,7 @@ namespace WizardUI.ScreenTransitions
     /// Screens use ATransitionComponents to animate their in and out transitions
     /// this can be extended to use lerps/animations
     /// </summary>
-    public abstract class ATransitionComponent
+    public abstract class ATransitionComponent : MonoBehaviour
     {
         /// <summary>
         /// Animate the specified target transform and execute finishedCallback when the animation is done
