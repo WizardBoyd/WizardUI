@@ -169,7 +169,8 @@ namespace WizardUI
         /// <param name="animate">should the animation be played?</param>
         public void Hide(bool animate = true)
         {
-            throw new NotImplementedException();
+            DoAnimation(animate ? m_animOut : null, OnTransitionOutFinished, false);
+            WhileHiding();
         }
 
         private void DoAnimation(ATransitionComponent caller, Action callback, bool isVisible)
