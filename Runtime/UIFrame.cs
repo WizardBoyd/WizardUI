@@ -29,7 +29,7 @@ namespace WizardUI
         {
             get
             {
-                if (m_panelLayer.IsAnyPanelVisible() || m_windowLayer.CurrentWindow != null)
+                if (m_windowLayer.CurrentWindow != null)
                     return false;
                 return true;
             }
