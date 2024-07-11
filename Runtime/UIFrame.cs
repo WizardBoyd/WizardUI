@@ -25,6 +25,16 @@ namespace WizardUI
         private Canvas m_maincanvas;
         private GraphicRaycaster m_graphicRaycaster;
 
+        public bool IsUIFrameEmpty
+        {
+            get
+            {
+                if (m_panelLayer.IsAnyPanelVisible() || m_windowLayer.CurrentWindow != null)
+                    return false;
+                return true;
+            }
+        }
+
         public Canvas MainCanvas
         {
             get

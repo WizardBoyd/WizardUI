@@ -31,6 +31,16 @@ namespace WizardUI.Panel
                 return panel.IsVisible;
             return false;
         }
+
+        public bool IsAnyPanelVisible()
+        {
+            foreach (var (_, uiScreenController) in m_registeredScreens)
+            {
+                if (uiScreenController.IsVisible)
+                    return true;
+            }
+            return false;
+        }
         
         private void ReparentToParaLayer(ScreenPriority controllerScreenPriority, Transform screenTransform)
         {
