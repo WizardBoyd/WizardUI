@@ -134,7 +134,7 @@ namespace WizardUI
         {
             foreach (var (id, screen) in m_registeredScreens)
             {
-                screen.Show();
+                screen.Hide(shouldAnimateWhenHiding);
             }
         }
         
